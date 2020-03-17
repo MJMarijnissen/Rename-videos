@@ -9,7 +9,9 @@ import os
 PATH = os.path.dirname(os.path.abspath(__file__))
 
 file_list = os.listdir(PATH)
-print(file_list)
+list_subfolders_with_paths = [f.path for f in os.scandir(PATH) if f.is_dir() and ".git" not in f.path]
+
+print(list_subfolders_with_paths)
 
 subfolder="\\test_dir1"
 
