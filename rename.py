@@ -18,7 +18,7 @@ kierunki=["W","E","S","N"]
 #file extension needed for file name
 fileextention = ".mpg"
 #begining of file name
-begining = "genetic_L1_3mies_M"
+begining = "common_L1_3mies_M"
 
 
 def main(): 
@@ -31,7 +31,7 @@ def main():
     list_after = []
 
     #Writing file in CURRENT folder
-    result_file = open("zamiana.csv", "w", newline='')
+    result_file = open("zamiana_" + subfolder + ".csv", "w", newline='')
     wr = csv.writer(result_file, dialect='excel')
 
     #iterating over list 
@@ -56,4 +56,4 @@ def main():
     result_file.close()
  
 if __name__ == '__main__': 
-    main() 
+    main()
