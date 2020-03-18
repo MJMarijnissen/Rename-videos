@@ -22,13 +22,17 @@ final_name = 'test_file2.txt'
 
 def main(): 
     i = 0
+    list_before = []
+    list_after = []
       
     for filename in os.listdir(PATH + subfolder): 
+        list_before.append(filename)
         dst = "\\test" + str(i) + ".txt"
         src = "\\" + filename 
  
         os.rename(PATH + subfolder+src, PATH + subfolder+dst) 
         i += 1
+        list_after.append(dst)
   
 # Driver Code 
 if __name__ == '__main__': 
