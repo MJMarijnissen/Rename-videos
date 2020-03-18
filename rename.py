@@ -30,6 +30,10 @@ def main():
     list_before = []
     list_after = []
 
+    #Writing file in CURRENT folder
+    result_file = open("zamiana.csv", "w", newline='')
+    wr = csv.writer(result_file, dialect='excel')
+
     #iterating over list 
     for filename in os.listdir(PATH + "\\"+ subfolder): 
         list_before.append(filename)
@@ -42,17 +46,17 @@ def main():
         list_after.append(dst)
         #print filenames
         print(list_before[i] + " --> " + list_after[i])
+        wr.writerow(list_before[i] + list_after[i])
+        #increas iterator
         i += 1
         #every 4th file change mouse name
         if i%4 == 0:
             m += 1
     #print(list_before, list_after)
     
-    #Writing file in CURRENT folder
-    result_file = open("zamiana.csv", "w")
-    wr = csv.writer(result_file, dialect='excel')
-    wr.writerow(list_before)
-    wr.writerow(list_after)
+
+    # wr.writerow(list_before)
+    # wr.writerow(list_after)
     result_file.close()
 
   
