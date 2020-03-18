@@ -52,16 +52,8 @@ def main():
         #every 4th file change mouse name
         if i%4 == 0:
             m += 1
-    #print(list_before, list_after)
-    
 
-    # wr.writerow(list_before)
-    # wr.writerow(list_after)
     result_file.close()
-
-  
-# Driver Code 
+ 
 if __name__ == '__main__': 
-      
-    # Calling main() function 
     main() 
