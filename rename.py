@@ -14,12 +14,6 @@ print(file_list)
 
 subfolder="\\test_dir1"
 
-initial_name = 'test_file.txt'
-final_name = 'test_file2.txt'
-
-
-
-#os.rename(r'C:\Users\user\Python_user\Ada_rename_videos\test_file.txt', r'C:\Users\user\Python_user\Ada_rename_videos\test_file2.txt')
 
 def main(): 
     i = 0
@@ -28,7 +22,7 @@ def main():
       
     for filename in os.listdir(PATH + subfolder): 
         list_before.append(filename)
-        dst = "\\test" + str(i) + ".txt"
+        dst = "\\badanie_" + "mysza1_P" + str(i%4+1) + "_"+ filename
         src = "\\" + filename 
  
         os.rename(PATH + subfolder+src, PATH + subfolder+dst) 
