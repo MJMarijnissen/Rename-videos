@@ -17,6 +17,8 @@ myszy = [1,3,4,5,6,7,8,9,10,11,12,14,15,18,19,20,21,23,24,25,27,29,30,31,32,38,6
 kierunki=["W","E","S","N"]
 #file extension needed for file name
 fileextention = ".mpg"
+#begining of file name
+begining = "heptic_L1_3mies_M"
 
 
 def main(): 
@@ -32,7 +34,7 @@ def main():
     for filename in os.listdir(PATH + "\\"+ subfolder): 
         list_before.append(filename)
         #dst -destination fil ename (altered)
-        dst = "\\genetic_L1_3mies_M"+str(myszy[m])+ "_P" + str(i%4+1) + "_"+ str(kierunki[i%4]) + "_"+ subfolder + fileextention
+        dst = "\\" + begining +str(myszy[m]) + "_P" + str(i%4+1) + "_" + str(kierunki[i%4]) + "_"+ subfolder + fileextention
         #src - previous filename
         src = "\\" + filename 
  
