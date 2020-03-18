@@ -12,7 +12,7 @@ PATH = os.path.dirname(os.path.abspath(__file__))
 file_list = os.listdir(PATH)
 print(file_list)
 
-subfolder="\\test_dir1"
+subfolder="\\"+"test_dir1"
 
 
 def main(): 
@@ -22,7 +22,7 @@ def main():
       
     for filename in os.listdir(PATH + subfolder): 
         list_before.append(filename)
-        dst = "\\badanie_" + "mysza1_P" + str(i%4+1) + "_"+ filename
+        dst = subfolder + "_mysza"+str(i)+ "_P" + str(i%4+1) + "_"+ filename
         src = "\\" + filename 
  
         os.rename(PATH + subfolder+src, PATH + subfolder+dst) 
@@ -32,7 +32,7 @@ def main():
     
     result_file = open("zamiana.csv", "w")
     for j in range(len(list_before)):
-        result_file.write(list_before[j] + "," + list_after[j] + "\n")
+        result_file.write(list_before[j] + ", " + list_after[j] + "\n")
     result_file.close()
 
   
