@@ -6,6 +6,7 @@ Created on Tue Mar 17 13:15:29 2020
 """
 
 import os
+import csv
 PATH = os.path.dirname(os.path.abspath(__file__))
 
 file_list = os.listdir(PATH)
@@ -33,6 +34,13 @@ def main():
         os.rename(PATH + subfolder+src, PATH + subfolder+dst) 
         i += 1
         list_after.append(dst)
+    print(list_before, list_after)
+    
+    result_file = open("zamiana.csv", "w")
+    for j in range(len(list_before)):
+        result_file.write(list_before[j] + "," + list_after[j] + "\n")
+    result_file.close()
+
   
 # Driver Code 
 if __name__ == '__main__': 
