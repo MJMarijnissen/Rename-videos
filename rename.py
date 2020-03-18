@@ -18,7 +18,7 @@ kierunki=["W","E","S","N"]
 #file extension needed for file name
 fileextention = ".mpg"
 #begining of file name
-begining = "heptic_L1_3mies_M"
+begining = "genetic_L1_3mies_M"
 
 
 def main(): 
@@ -46,7 +46,7 @@ def main():
         list_after.append(dst)
         #print filenames
         print(list_before[i] + " --> " + list_after[i])
-        wr.writerow(list_before[i] + list_after[i])
+        wr.writerow([list_before[i]] + [list_after[i]])
         #increas iterator
         i += 1
         #every 4th file change mouse name
